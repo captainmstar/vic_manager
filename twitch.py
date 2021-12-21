@@ -33,7 +33,7 @@ async def toggle_recording():
 async def change_scene(name):
     print("Calling toggle_scene()", name)
     # Note: This assumes an INI file has been configured.
-    conn = connection.SlobsConnection(ConnectionConfig("b1248f338a7f41d39714ca5b22a063eb68448c"))
+    conn = connection.SlobsConnection(ConnectionConfig("d2e2a1823b45f5419c40b0568571148cff38a3"))
 
     # Give CPU to both your task and the connection instance.
     await asyncio.gather(
@@ -46,7 +46,7 @@ async def change_scene(name):
 async def go_toggle_streaming():
     print("Calling go_toggle_streaming()")
     # Note: This assumes an INI file has been configured.
-    conn = connection.SlobsConnection(ConnectionConfig("b1248f338a7f41d39714ca5b22a063eb68448c"))
+    conn = connection.SlobsConnection(ConnectionConfig("d2e2a1823b45f5419c40b0568571148cff38a3"))
 
     # Give CPU to both your task and the connection instance.
     await asyncio.gather(
@@ -59,7 +59,7 @@ async def go_toggle_streaming():
 async def go_toggle_recording():
     print("Calling go_toggle_recording()")
     # Note: This assumes an INI file has been configured.
-    conn = connection.SlobsConnection(ConnectionConfig("b1248f338a7f41d39714ca5b22a063eb68448c"))
+    conn = connection.SlobsConnection(ConnectionConfig("d2e2a1823b45f5419c40b0568571148cff38a3"))
 
     # Give CPU to both your task and the connection instance.
     await asyncio.gather(

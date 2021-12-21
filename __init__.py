@@ -1,14 +1,6 @@
 import logging
 import os
-from asgiref.wsgi import WsgiToAsgi
-from flask import Flask, jsonify
-
-
-countries = [
-    {"id": 1, "name": "Thailand", "capital": "Bangkok", "area": 513120},
-    {"id": 2, "name": "Australia", "capital": "Canberra", "area": 7617930},
-    {"id": 3, "name": "Egypt", "capital": "Cairo", "area": 1010408},
-]
+from flask import Flask
 
 
 def create_app(test_config=None):
@@ -36,9 +28,12 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, World!'
 
-    asgi_app = WsgiToAsgi(app)
-
     return app
+
+
+if __name__ == '__main__':
+    app = create_app()
+    app.run()
 
 
 logging.basicConfig(level=logging.DEBUG)
